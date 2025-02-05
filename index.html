@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>阅读障碍视觉模拟</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+        }
+
+        .text {
+            font-size: 24px;
+            font-weight: bold;
+            line-height: 1.5;
+            color: #333;
+            display: inline-block;
+            animation: distort 2s infinite;
+            filter: blur(1px);
+        }
+
+        /* 模拟文字跳动、错位和模糊的效果 */
+        @keyframes distort {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+                filter: blur(1px);
+            }
+            25% {
+                transform: translate(-2px, 3px) rotate(-2deg);
+                filter: blur(2px);
+            }
+            50% {
+                transform: translate(2px, -3px) rotate(2deg);
+                filter: blur(1px);
+            }
+            75% {
+                transform: translate(1px, 2px) rotate(-1deg);
+                filter: blur(1.5px);
+            }
+            100% {
+                transform: translate(-1px, -2px) rotate(1deg);
+                filter: blur(2px);
+            }
+        }
+
+        .word {
+            display: inline-block;
+            margin: 0 2px;
+            animation: jitter 0.5s infinite alternate;
+        }
+
+        /* 模拟字母错位的效果 */
+        @keyframes jitter {
+            0% { transform: rotate(1deg); }
+            100% { transform: rotate(-1deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>普通人眼中的文字 vs 阅读障碍者眼中的文字</h1>
+    <p class="text">
+        <span class="word">这</span>
+        <span class="word">是</span>
+        <span class="word">一</span>
+        <span class="word">段</span>
+        <span class="word">模</span>
+        <span class="word">拟</span>
+        <span class="word">阅</span>
+        <span class="word">读</span>
+        <span class="word">障</span>
+        <span class="word">碍</span>
+        <span class="word">者</span>
+        <span class="word">眼</span>
+        <span class="word">中</span>
+        <span class="word">的</span>
+        <span class="word">文</span>
+        <span class="word">字</span>
+        <span class="word">体</span>
+        <span class="word">验</span>
+        <span class="word">，</span>
+        <span class="word">你</span>
+        <span class="word">能</span>
+        <span class="word">看</span>
+        <span class="word">清</span>
+        <span class="word">楚</span>
+        <span class="word">吗</span>
+        <span class="word">？</span>
+    </p>
+
+</body>
+</html>
